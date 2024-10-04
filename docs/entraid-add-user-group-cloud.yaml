@@ -1,0 +1,69 @@
+schema_version: "v0.1.0"
+automation:
+  identifier: "entraid-add-user-group-cloud"  # Ejemplo: talos-day2-aws
+  name: "Añadir usuario / s a un grupo gestionado en CLOUD"
+  description: "Este automatismo permite añadir un usuario/s a un grupo (/SRE/AZR/azr-aad-assignUsersToGroup)"
+  engineering_team: "Alejandro Santacana Canton"
+  engineering_team_contact:
+    engineering_team_contact_email: "santale@3p.mapfre.com"
+    engineering_team_contact_name: "Alejandro Santacana Canton"
+  engineering_team_responsible:
+    engineering_team_responsible_email: "rcruz2@mapfre.com"
+    engineering_team_responsible_name: "Raul de la Cruz"
+  repository:
+    repository_url: "https://bitbucket.org/mapfre-cloud-services/azr-aad-assignuserstogroup/"
+  updated_at: "2022-11-08"  # Fecha de la última actualización
+  version: "1.0.0"
+  tags:
+    tech:
+      - "AZR"
+      - "EntraID"
+    scope:
+      - "IdentityManagement"
+  executor:
+    executor_type: "Jenkins"  # Ejemplos: API REST, Jenkins, etc.
+    environments:
+      - environment: "pro"
+        details:
+          api_endpoint: "https://cloud.pro.devops.mapfre.com/jenkins/job/SRE/job/AZR/job/azr-aad-assignUsersToGroup/job/main/"
+          api_http_method: ""
+          api_swagger_url: ""
+          api_valid_response_codes:
+            - 200
+            - 201
+          input_params:
+            - name: "peticion"
+              description: "en este campo se deberá incluir el ID de referencia de quién solicita ejecutar este autom, por ejemplo Si la ejecución es desde POSEIDON debera de contener el id_poseidon"
+              type: "string"
+              required: true
+            - name: "Microsoft_Graph_API_version"
+              description: "Este campo por defecto solo contempla dos valores v1.0 ó beta, por defecto siempre será v1.0"
+              type: "string"
+              required: true
+            - name: "group_id"
+              description: "En este campo se deberá de indicar el ID del grupo si este se conoce, sino dejar en blanco"
+              type: "string"
+              required: true
+            - name: "group_displayName"
+              description: "En este campo se deberá de incluir el Display Name del grupo, por ejemplo GAZR-ESTE-GRUPO-ES-DE-PRUEBA. Este campo es Mandatory"
+              type: "string"
+              required: true
+            - name: "users_id_or_userPrincipalName"
+              description: "En este campo se deberá de añadir el UserPrincipalName del usuario. por ejemplo usuario@mapfre.net. En el caso de ser necesario añadir más de un usuario, los UPN's deberán de ir separados por una coma"
+              type: "string"
+              required: true
+          output_params:
+            - name: "resultado"
+              description: "Descripción del resultado esperado"
+              type: "string"
+              required: true
+          output_values_description: "Tanto el autom como el Jenkinsfile asociado a su ejecución, envian un mensaje de correo electrónico a una cuenta de correo harcodeada en el código de la pipeline de Jenkins"
+  securizacion_parametros_salida: ""
+  alarmado: ""
+  qa: ""
+  documentation: "https://bitbucket.org/mapfre-cloud-services/azr-aad-assignuserstogroup/src/main/"
+  metricas:
+    - "Métrica1"
+    - "Métrica2"
+  compliance_%: 100
+

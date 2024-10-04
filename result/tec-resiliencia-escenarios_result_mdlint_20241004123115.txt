@@ -1,0 +1,797 @@
+Validation failed:
+'precons' is a required property
+
+Failed validating 'required' in schema['properties']['automation']:
+    {'properties': {'description': {'maxLength': 255,
+                                    'minLength': 1,
+                                    'pattern': '^[a-zA-Z0-9_ ]*$',
+                                    'type': 'string'},
+                    'engineering_team': {'maxLength': 255,
+                                         'minLength': 1,
+                                         'pattern': '^[a-zA-Z0-9_ ]*$',
+                                         'type': 'string'},
+                    'engineering_team_contact': {'properties': {'engineering_team_contact_email': {'maxLength': 255,
+                                                                                                   'minLength': 1,
+                                                                                                   'pattern': '^[a-zA-Z0-9_ '
+                                                                                                              ']*$',
+                                                                                                   'type': 'string'},
+                                                                'engineering_team_contact_name': {'maxLength': 255,
+                                                                                                  'minLength': 1,
+                                                                                                  'pattern': '^[a-zA-Z0-9_ '
+                                                                                                             ']*$',
+                                                                                                  'type': 'string'}},
+                                                 'required': ['engineering_team_contact_email',
+                                                              'engineering_team_contact_name'],
+                                                 'type': 'object'},
+                    'engineering_team_responsible': {'properties': {'engineering_team_responsible_email': {'maxLength': 255,
+                                                                                                           'minLength': 1,
+                                                                                                           'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                      ']*$',
+                                                                                                           'type': 'string'},
+                                                                    'engineering_team_responsible_name': {'maxLength': 255,
+                                                                                                          'minLength': 1,
+                                                                                                          'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                     ']*$',
+                                                                                                          'type': 'string'}},
+                                                     'required': ['engineering_team_responsible_email',
+                                                                  'engineering_team_responsible_name'],
+                                                     'type': 'object'},
+                    'executor': {'properties': {'environments': {'items': {'properties': {'dev': {'properties': {'aap_instance': {'maxLength': 255,
+                                                                                                                                  'minLength': 1,
+                                                                                                                                  'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                             ']*$',
+                                                                                                                                  'type': 'string'},
+                                                                                                                 'aap_template_identifier': {'maxLength': 255,
+                                                                                                                                             'minLength': 1,
+                                                                                                                                             'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                        ']*$',
+                                                                                                                                             'type': 'string'},
+                                                                                                                 'api_endpoint': {'maxLength': 255,
+                                                                                                                                  'minLength': 1,
+                                                                                                                                  'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                             ']*$',
+                                                                                                                                  'type': 'string'},
+                                                                                                                 'api_http_method': {'maxLength': 255,
+                                                                                                                                     'minLength': 1,
+                                                                                                                                     'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                ']*$',
+                                                                                                                                     'type': 'string'},
+                                                                                                                 'api_swagger_url': {'maxLength': 255,
+                                                                                                                                     'minLength': 1,
+                                                                                                                                     'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                ']*$',
+                                                                                                                                     'type': 'string'},
+                                                                                                                 'api_valid_response_codes': {'items': {'type': 'integer'},
+                                                                                                                                              'maxItems': 100,
+                                                                                                                                              'minItems': 1,
+                                                                                                                                              'type': 'array'},
+                                                                                                                 'github_branch': {'maxLength': 255,
+                                                                                                                                   'minLength': 1,
+                                                                                                                                   'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                              ']*$',
+                                                                                                                                   'type': 'string'},
+                                                                                                                 'github_owner': {'maxLength': 255,
+                                                                                                                                  'minLength': 1,
+                                                                                                                                  'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                             ']*$',
+                                                                                                                                  'type': 'string'},
+                                                                                                                 'github_repo': {'maxLength': 255,
+                                                                                                                                 'minLength': 1,
+                                                                                                                                 'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                            ']*$',
+                                                                                                                                 'type': 'string'},
+                                                                                                                 'github_workflow_file_name': {'maxLength': 255,
+                                                                                                                                               'minLength': 1,
+                                                                                                                                               'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                          ']*$',
+                                                                                                                                               'type': 'string'},
+                                                                                                                 'input_params': {'items': {'properties': {'description': {'maxLength': 255,
+                                                                                                                                                                           'minLength': 1,
+                                                                                                                                                                           'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                      ']*$',
+                                                                                                                                                                           'type': 'string'},
+                                                                                                                                                           'fixed_value': {'maxLength': 255,
+                                                                                                                                                                           'minLength': 1,
+                                                                                                                                                                           'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                      ']*$',
+                                                                                                                                                                           'type': 'string'},
+                                                                                                                                                           'keys': {'items': {'properties': {'description': {'maxLength': 255,
+                                                                                                                                                                                                             'minLength': 1,
+                                                                                                                                                                                                             'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                                                        ']*$',
+                                                                                                                                                                                                             'type': 'string'},
+                                                                                                                                                                                             'name': {'maxLength': 255,
+                                                                                                                                                                                                      'minLength': 1,
+                                                                                                                                                                                                      'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                                                 ']*$',
+                                                                                                                                                                                                      'type': 'string'},
+                                                                                                                                                                                             'required': {'type': 'boolean'},
+                                                                                                                                                                                             'type': {'maxLength': 255,
+                                                                                                                                                                                                      'minLength': 1,
+                                                                                                                                                                                                      'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                                                 ']*$',
+                                                                                                                                                                                                      'type': 'string'}},
+                                                                                                                                                                              'required': ['description',
+                                                                                                                                                                                           'name',
+                                                                                                                                                                                           'required',
+                                                                                                                                                                                           'type'],
+                                                                                                                                                                              'type': 'object'},
+                                                                                                                                                                    'maxItems': 100,
+                                                                                                                                                                    'minItems': 1,
+                                                                                                                                                                    'type': 'array'},
+                                                                                                                                                           'name': {'maxLength': 255,
+                                                                                                                                                                    'minLength': 1,
+                                                                                                                                                                    'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                               ']*$',
+                                                                                                                                                                    'type': 'string'},
+                                                                                                                                                           'required': {'type': 'boolean'},
+                                                                                                                                                           'type': {'maxLength': 255,
+                                                                                                                                                                    'minLength': 1,
+                                                                                                                                                                    'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                               ']*$',
+                                                                                                                                                                    'type': 'string'}},
+                                                                                                                                            'required': ['description',
+                                                                                                                                                         'name',
+                                                                                                                                                         'required',
+                                                                                                                                                         'type'],
+                                                                                                                                            'type': 'object'},
+                                                                                                                                  'maxItems': 100,
+                                                                                                                                  'minItems': 1,
+                                                                                                                                  'type': 'array'},
+                                                                                                                 'jenkins_organization': {'maxLength': 255,
+                                                                                                                                          'minLength': 1,
+                                                                                                                                          'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                     ']*$',
+                                                                                                                                          'type': 'string'},
+                                                                                                                 'jenkins_pipeline_name': {'maxLength': 255,
+                                                                                                                                           'minLength': 1,
+                                                                                                                                           'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                      ']*$',
+                                                                                                                                           'type': 'string'},
+                                                                                                                 'jenkins_pipeline_url': {'maxLength': 255,
+                                                                                                                                          'minLength': 1,
+                                                                                                                                          'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                     ']*$',
+                                                                                                                                          'type': 'string'},
+                                                                                                                 'output_params': {'items': {'properties': {'description': {'maxLength': 255,
+                                                                                                                                                                            'minLength': 1,
+                                                                                                                                                                            'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                       ']*$',
+                                                                                                                                                                            'type': 'string'},
+                                                                                                                                                            'name': {'maxLength': 255,
+                                                                                                                                                                     'minLength': 1,
+                                                                                                                                                                     'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                ']*$',
+                                                                                                                                                                     'type': 'string'},
+                                                                                                                                                            'required': {'type': 'boolean'},
+                                                                                                                                                            'type': {'maxLength': 255,
+                                                                                                                                                                     'minLength': 1,
+                                                                                                                                                                     'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                ']*$',
+                                                                                                                                                                     'type': 'string'}},
+                                                                                                                                             'required': ['description',
+                                                                                                                                                          'name',
+                                                                                                                                                          'required',
+                                                                                                                                                          'type'],
+                                                                                                                                             'type': 'object'},
+                                                                                                                                   'maxItems': 100,
+                                                                                                                                   'minItems': 1,
+                                                                                                                                   'type': 'array'},
+                                                                                                                 'output_values_description': {'maxLength': 255,
+                                                                                                                                               'minLength': 1,
+                                                                                                                                               'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                          ']*$',
+                                                                                                                                               'type': 'string'}},
+                                                                                                  'required': ['aap_instance',
+                                                                                                               'aap_template_identifier',
+                                                                                                               'api_endpoint',
+                                                                                                               'api_http_method',
+                                                                                                               'api_swagger_url',
+                                                                                                               'api_valid_response_codes',
+                                                                                                               'github_branch',
+                                                                                                               'github_owner',
+                                                                                                               'github_repo',
+                                                                                                               'github_workflow_file_name',
+                                                                                                               'input_params',
+                                                                                                               'jenkins_organization',
+                                                                                                               'jenkins_pipeline_name',
+                                                                                                               'jenkins_pipeline_url',
+                                                                                                               'output_params',
+                                                                                                               'output_values_description'],
+                                                                                                  'type': 'object'},
+                                                                                          'pre': {'properties': {'aap_instance': {'maxLength': 255,
+                                                                                                                                  'minLength': 1,
+                                                                                                                                  'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                             ']*$',
+                                                                                                                                  'type': 'string'},
+                                                                                                                 'aap_template_identifier': {'maxLength': 255,
+                                                                                                                                             'minLength': 1,
+                                                                                                                                             'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                        ']*$',
+                                                                                                                                             'type': 'string'},
+                                                                                                                 'api_endpoint': {'maxLength': 255,
+                                                                                                                                  'minLength': 1,
+                                                                                                                                  'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                             ']*$',
+                                                                                                                                  'type': 'string'},
+                                                                                                                 'api_http_method': {'maxLength': 255,
+                                                                                                                                     'minLength': 1,
+                                                                                                                                     'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                ']*$',
+                                                                                                                                     'type': 'string'},
+                                                                                                                 'api_swagger_url': {'maxLength': 255,
+                                                                                                                                     'minLength': 1,
+                                                                                                                                     'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                ']*$',
+                                                                                                                                     'type': 'string'},
+                                                                                                                 'api_valid_response_codes': {'items': {'type': 'integer'},
+                                                                                                                                              'maxItems': 100,
+                                                                                                                                              'minItems': 1,
+                                                                                                                                              'type': 'array'},
+                                                                                                                 'github_branch': {'maxLength': 255,
+                                                                                                                                   'minLength': 1,
+                                                                                                                                   'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                              ']*$',
+                                                                                                                                   'type': 'string'},
+                                                                                                                 'github_owner': {'maxLength': 255,
+                                                                                                                                  'minLength': 1,
+                                                                                                                                  'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                             ']*$',
+                                                                                                                                  'type': 'string'},
+                                                                                                                 'github_repo': {'maxLength': 255,
+                                                                                                                                 'minLength': 1,
+                                                                                                                                 'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                            ']*$',
+                                                                                                                                 'type': 'string'},
+                                                                                                                 'github_workflow_file_name': {'maxLength': 255,
+                                                                                                                                               'minLength': 1,
+                                                                                                                                               'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                          ']*$',
+                                                                                                                                               'type': 'string'},
+                                                                                                                 'input_params': {'items': {'properties': {'description': {'maxLength': 255,
+                                                                                                                                                                           'minLength': 1,
+                                                                                                                                                                           'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                      ']*$',
+                                                                                                                                                                           'type': 'string'},
+                                                                                                                                                           'fixed_value': {'maxLength': 255,
+                                                                                                                                                                           'minLength': 1,
+                                                                                                                                                                           'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                      ']*$',
+                                                                                                                                                                           'type': 'string'},
+                                                                                                                                                           'keys': {'items': {'properties': {'description': {'maxLength': 255,
+                                                                                                                                                                                                             'minLength': 1,
+                                                                                                                                                                                                             'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                                                        ']*$',
+                                                                                                                                                                                                             'type': 'string'},
+                                                                                                                                                                                             'name': {'maxLength': 255,
+                                                                                                                                                                                                      'minLength': 1,
+                                                                                                                                                                                                      'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                                                 ']*$',
+                                                                                                                                                                                                      'type': 'string'},
+                                                                                                                                                                                             'required': {'type': 'boolean'},
+                                                                                                                                                                                             'type': {'maxLength': 255,
+                                                                                                                                                                                                      'minLength': 1,
+                                                                                                                                                                                                      'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                                                 ']*$',
+                                                                                                                                                                                                      'type': 'string'}},
+                                                                                                                                                                              'required': ['description',
+                                                                                                                                                                                           'name',
+                                                                                                                                                                                           'required',
+                                                                                                                                                                                           'type'],
+                                                                                                                                                                              'type': 'object'},
+                                                                                                                                                                    'maxItems': 100,
+                                                                                                                                                                    'minItems': 1,
+                                                                                                                                                                    'type': 'array'},
+                                                                                                                                                           'name': {'maxLength': 255,
+                                                                                                                                                                    'minLength': 1,
+                                                                                                                                                                    'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                               ']*$',
+                                                                                                                                                                    'type': 'string'},
+                                                                                                                                                           'required': {'type': 'boolean'},
+                                                                                                                                                           'type': {'maxLength': 255,
+                                                                                                                                                                    'minLength': 1,
+                                                                                                                                                                    'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                               ']*$',
+                                                                                                                                                                    'type': 'string'}},
+                                                                                                                                            'required': ['description',
+                                                                                                                                                         'name',
+                                                                                                                                                         'required',
+                                                                                                                                                         'type'],
+                                                                                                                                            'type': 'object'},
+                                                                                                                                  'maxItems': 100,
+                                                                                                                                  'minItems': 1,
+                                                                                                                                  'type': 'array'},
+                                                                                                                 'jenkins_organization': {'maxLength': 255,
+                                                                                                                                          'minLength': 1,
+                                                                                                                                          'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                     ']*$',
+                                                                                                                                          'type': 'string'},
+                                                                                                                 'jenkins_pipeline_name': {'maxLength': 255,
+                                                                                                                                           'minLength': 1,
+                                                                                                                                           'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                      ']*$',
+                                                                                                                                           'type': 'string'},
+                                                                                                                 'jenkins_pipeline_url': {'maxLength': 255,
+                                                                                                                                          'minLength': 1,
+                                                                                                                                          'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                     ']*$',
+                                                                                                                                          'type': 'string'},
+                                                                                                                 'output_params': {'items': {'properties': {'description': {'maxLength': 255,
+                                                                                                                                                                            'minLength': 1,
+                                                                                                                                                                            'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                       ']*$',
+                                                                                                                                                                            'type': 'string'},
+                                                                                                                                                            'name': {'maxLength': 255,
+                                                                                                                                                                     'minLength': 1,
+                                                                                                                                                                     'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                ']*$',
+                                                                                                                                                                     'type': 'string'},
+                                                                                                                                                            'required': {'type': 'boolean'},
+                                                                                                                                                            'type': {'maxLength': 255,
+                                                                                                                                                                     'minLength': 1,
+                                                                                                                                                                     'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                ']*$',
+                                                                                                                                                                     'type': 'string'}},
+                                                                                                                                             'required': ['description',
+                                                                                                                                                          'name',
+                                                                                                                                                          'required',
+                                                                                                                                                          'type'],
+                                                                                                                                             'type': 'object'},
+                                                                                                                                   'maxItems': 100,
+                                                                                                                                   'minItems': 1,
+                                                                                                                                   'type': 'array'},
+                                                                                                                 'output_values_description': {'maxLength': 255,
+                                                                                                                                               'minLength': 1,
+                                                                                                                                               'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                          ']*$',
+                                                                                                                                               'type': 'string'}},
+                                                                                                  'required': ['aap_instance',
+                                                                                                               'aap_template_identifier',
+                                                                                                               'api_endpoint',
+                                                                                                               'api_http_method',
+                                                                                                               'api_swagger_url',
+                                                                                                               'api_valid_response_codes',
+                                                                                                               'github_branch',
+                                                                                                               'github_owner',
+                                                                                                               'github_repo',
+                                                                                                               'github_workflow_file_name',
+                                                                                                               'input_params',
+                                                                                                               'jenkins_organization',
+                                                                                                               'jenkins_pipeline_name',
+                                                                                                               'jenkins_pipeline_url',
+                                                                                                               'output_params',
+                                                                                                               'output_values_description'],
+                                                                                                  'type': 'object'},
+                                                                                          'pro': {'properties': {'aap_instance': {'maxLength': 255,
+                                                                                                                                  'minLength': 1,
+                                                                                                                                  'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                             ']*$',
+                                                                                                                                  'type': 'string'},
+                                                                                                                 'aap_template_identifier': {'maxLength': 255,
+                                                                                                                                             'minLength': 1,
+                                                                                                                                             'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                        ']*$',
+                                                                                                                                             'type': 'string'},
+                                                                                                                 'api_endpoint': {'maxLength': 255,
+                                                                                                                                  'minLength': 1,
+                                                                                                                                  'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                             ']*$',
+                                                                                                                                  'type': 'string'},
+                                                                                                                 'api_http_method': {'maxLength': 255,
+                                                                                                                                     'minLength': 1,
+                                                                                                                                     'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                ']*$',
+                                                                                                                                     'type': 'string'},
+                                                                                                                 'api_swagger_url': {'maxLength': 255,
+                                                                                                                                     'minLength': 1,
+                                                                                                                                     'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                ']*$',
+                                                                                                                                     'type': 'string'},
+                                                                                                                 'api_valid_response_codes': {'items': {'type': 'integer'},
+                                                                                                                                              'maxItems': 100,
+                                                                                                                                              'minItems': 1,
+                                                                                                                                              'type': 'array'},
+                                                                                                                 'github_branch': {'maxLength': 255,
+                                                                                                                                   'minLength': 1,
+                                                                                                                                   'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                              ']*$',
+                                                                                                                                   'type': 'string'},
+                                                                                                                 'github_owner': {'maxLength': 255,
+                                                                                                                                  'minLength': 1,
+                                                                                                                                  'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                             ']*$',
+                                                                                                                                  'type': 'string'},
+                                                                                                                 'github_repo': {'maxLength': 255,
+                                                                                                                                 'minLength': 1,
+                                                                                                                                 'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                            ']*$',
+                                                                                                                                 'type': 'string'},
+                                                                                                                 'github_workflow_file_name': {'maxLength': 255,
+                                                                                                                                               'minLength': 1,
+                                                                                                                                               'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                          ']*$',
+                                                                                                                                               'type': 'string'},
+                                                                                                                 'input_params': {'items': {'properties': {'description': {'maxLength': 255,
+                                                                                                                                                                           'minLength': 1,
+                                                                                                                                                                           'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                      ']*$',
+                                                                                                                                                                           'type': 'string'},
+                                                                                                                                                           'keys': {'items': {'properties': {'description': {'maxLength': 255,
+                                                                                                                                                                                                             'minLength': 1,
+                                                                                                                                                                                                             'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                                                        ']*$',
+                                                                                                                                                                                                             'type': 'string'},
+                                                                                                                                                                                             'name': {'maxLength': 255,
+                                                                                                                                                                                                      'minLength': 1,
+                                                                                                                                                                                                      'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                                                 ']*$',
+                                                                                                                                                                                                      'type': 'string'},
+                                                                                                                                                                                             'required': {'type': 'boolean'},
+                                                                                                                                                                                             'type': {'maxLength': 255,
+                                                                                                                                                                                                      'minLength': 1,
+                                                                                                                                                                                                      'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                                                                 ']*$',
+                                                                                                                                                                                                      'type': 'string'}},
+                                                                                                                                                                              'required': ['description',
+                                                                                                                                                                                           'name',
+                                                                                                                                                                                           'required',
+                                                                                                                                                                                           'type'],
+                                                                                                                                                                              'type': 'object'},
+                                                                                                                                                                    'maxItems': 100,
+                                                                                                                                                                    'minItems': 1,
+                                                                                                                                                                    'type': 'array'},
+                                                                                                                                                           'name': {'maxLength': 255,
+                                                                                                                                                                    'minLength': 1,
+                                                                                                                                                                    'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                               ']*$',
+                                                                                                                                                                    'type': 'string'},
+                                                                                                                                                           'required': {'type': 'boolean'},
+                                                                                                                                                           'type': {'maxLength': 255,
+                                                                                                                                                                    'minLength': 1,
+                                                                                                                                                                    'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                                               ']*$',
+                                                                                                                                                                    'type': 'string'}},
+                                                                                                                                            'required': ['description',
+                                                                                                                                                         'keys',
+                                                                                                                                                         'name',
+                                                                                                                                                         'required',
+                                                                                                                                                         'type'],
+                                                                                                                                            'type': 'object'},
+                                                                                                                                  'maxItems': 100,
+                                                                                                                                  'minItems': 1,
+                                                                                                                                  'type': 'array'},
+                                                                                                                 'jenkins_organization': {'maxLength': 255,
+                                                                                                                                          'minLength': 1,
+                                                                                                                                          'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                     ']*$',
+                                                                                                                                          'type': 'string'},
+                                                                                                                 'jenkins_pipeline_name': {'maxLength': 255,
+                                                                                                                                           'minLength': 1,
+                                                                                                                                           'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                      ']*$',
+                                                                                                                                           'type': 'string'},
+                                                                                                                 'jenkins_pipeline_url': {'maxLength': 255,
+                                                                                                                                          'minLength': 1,
+                                                                                                                                          'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                                     ']*$',
+                                                                                                                                          'type': 'string'}},
+                                                                                                  'required': ['aap_instance',
+                                                                                                               'aap_template_identifier',
+                                                                                                               'api_endpoint',
+                                                                                                               'api_http_method',
+                                                                                                               'api_swagger_url',
+                                                                                                               'api_valid_response_codes',
+                                                                                                               'github_branch',
+                                                                                                               'github_owner',
+                                                                                                               'github_repo',
+                                                                                                               'github_workflow_file_name',
+                                                                                                               'input_params',
+                                                                                                               'jenkins_organization',
+                                                                                                               'jenkins_pipeline_name',
+                                                                                                               'jenkins_pipeline_url'],
+                                                                                                  'type': 'object'}},
+                                                                           'type': 'object'},
+                                                                 'maxItems': 100,
+                                                                 'minItems': 1,
+                                                                 'type': 'array'},
+                                                'executor_type': {'maxLength': 255,
+                                                                  'minLength': 1,
+                                                                  'pattern': '^[a-zA-Z0-9_ '
+                                                                             ']*$',
+                                                                  'type': 'string'}},
+                                 'required': ['environments',
+                                              'executor_type'],
+                                 'type': 'object'},
+                    'identifier': {'maxLength': 255,
+                                   'minLength': 1,
+                                   'pattern': '^[a-zA-Z0-9_ ]*$',
+                                   'type': 'string'},
+                    'name': {'maxLength': 255,
+                             'minLength': 1,
+                             'pattern': '^[a-zA-Z0-9_ ]*$',
+                             'type': 'string'},
+                    'precons': {'items': {'properties': {'condition': {'properties': {'args"': {'items': {'properties': {'key': {'maxLength': 255,
+                                                                                                                                 'minLength': 1,
+                                                                                                                                 'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                            ']*$',
+                                                                                                                                 'type': 'string'},
+                                                                                                                         'value': {'maxLength': 255,
+                                                                                                                                   'minLength': 1,
+                                                                                                                                   'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                                              ']*$',
+                                                                                                                                   'type': 'string'}},
+                                                                                                          'required': ['key',
+                                                                                                                       'value'],
+                                                                                                          'type': 'object'},
+                                                                                                'maxItems': 100,
+                                                                                                'minItems': 1,
+                                                                                                'type': 'array'},
+                                                                                      'error_message"': {'maxLength': 255,
+                                                                                                         'minLength': 1,
+                                                                                                         'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                    ']*$',
+                                                                                                         'type': 'string'},
+                                                                                      'function_lambda_account': {'maxLength': 255,
+                                                                                                                  'minLength': 1,
+                                                                                                                  'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                             ']*$',
+                                                                                                                  'type': 'string'},
+                                                                                      'function_lambda_name': {'maxLength': 255,
+                                                                                                               'minLength': 1,
+                                                                                                               'pattern': '^[a-zA-Z0-9_ '
+                                                                                                                          ']*$',
+                                                                                                               'type': 'string'},
+                                                                                      'result_expected"': {'type': 'integer'}},
+                                                                       'required': ['args"',
+                                                                                    'error_message"',
+                                                                                    'function_lambda_account',
+                                                                                    'function_lambda_name',
+                                                                                    'result_expected"'],
+                                                                       'type': 'object'},
+                                                         'precon_description': {'maxLength': 255,
+                                                                                'minLength': 1,
+                                                                                'pattern': '^[a-zA-Z0-9_ '
+                                                                                           ']*$',
+                                                                                'type': 'string'},
+                                                         'precon_name': {'maxLength': 255,
+                                                                         'minLength': 1,
+                                                                         'pattern': '^[a-zA-Z0-9_ '
+                                                                                    ']*$',
+                                                                         'type': 'string'}},
+                                          'required': ['condition',
+                                                       'precon_description',
+                                                       'precon_name'],
+                                          'type': 'object'},
+                                'maxItems': 100,
+                                'minItems': 1,
+                                'type': 'array'},
+                    'repository': {'properties': {'repository_url': {'maxLength': 255,
+                                                                     'minLength': 1,
+                                                                     'pattern': '^[a-zA-Z0-9_ '
+                                                                                ']*$',
+                                                                     'type': 'string'}},
+                                   'required': ['repository_url'],
+                                   'type': 'object'},
+                    'tags': {'properties': {'scope': {'items': {'type': 'string'},
+                                                      'maxItems': 100,
+                                                      'minItems': 1,
+                                                      'type': 'array'},
+                                            'tech': {'items': {'type': 'string'},
+                                                     'maxItems': 100,
+                                                     'minItems': 1,
+                                                     'type': 'array'}},
+                             'required': ['scope', 'tech'],
+                             'type': 'object'},
+                    'updated_at': {'maxLength': 255,
+                                   'minLength': 1,
+                                   'pattern': '^[a-zA-Z0-9_ ]*$',
+                                   'type': 'string'},
+                    'version': {'maxLength': 255,
+                                'minLength': 1,
+                                'pattern': '^[a-zA-Z0-9_ ]*$',
+                                'type': 'string'}},
+     'required': ['description',
+                  'engineering_team',
+                  'engineering_team_contact',
+                  'engineering_team_responsible',
+                  'executor',
+                  'identifier',
+                  'name',
+                  'precons',
+                  'repository',
+                  'tags',
+                  'updated_at',
+                  'version'],
+     'type': 'object'}
+
+On instance['automation']:
+    {'alarmado': 'El sistema de alarmas enviará notificaciones a los '
+                 'responsables en caso de fallo en la ejecución.',
+     'compliance_%': 100,
+     'description': 'Automatismo que ejecuta pruebas de resiliencia en '
+                    'diferentes escenarios, como la caída de una AZ, '
+                    'estrés y caída de toda una región.',
+     'documentation': 'https://cloud.mapfre.com/docs/tec/resiliencia-escenarios',
+     'engineering_team': 'TEC',
+     'engineering_team_contact': {'engineering_team_contact_email': 'contacto@tec.mapfre.com',
+                                  'engineering_team_contact_name': 'Equipo '
+                                                                   'de '
+                                                                   'Resiliencia'},
+     'engineering_team_responsible': {'engineering_team_responsible_email': 'responsable@tec.mapfre.com',
+                                      'engineering_team_responsible_name': 'Responsable '
+                                                                           'de '
+                                                                           'Resiliencia'},
+     'executor': {'environments': [{'details': {'api_endpoint': 'https://cloud.pro.devops.mapfre.com/jenkins/job/TEC/is-tec/tec-resiliencia-escenarios',
+                                                'api_http_method': 'POST',
+                                                'api_valid_response_codes': [200,
+                                                                             500],
+                                                'input_params': [{'description': 'Identificador '
+                                                                                 'de '
+                                                                                 'la '
+                                                                                 'ejecución '
+                                                                                 'para '
+                                                                                 'rastreo '
+                                                                                 'y '
+                                                                                 'seguimiento.',
+                                                                  'name': 'id_execution',
+                                                                  'required': True,
+                                                                  'type': 'string'},
+                                                                 {'description': 'Correo '
+                                                                                 'electrónico '
+                                                                                 'del '
+                                                                                 'peticionario '
+                                                                                 'y '
+                                                                                 'contacto '
+                                                                                 'de '
+                                                                                 'resultados.',
+                                                                  'name': 'email',
+                                                                  'required': True,
+                                                                  'type': 'string'},
+                                                                 {'description': 'ID '
+                                                                                 'del '
+                                                                                 'producto '
+                                                                                 'en '
+                                                                                 'Zeus.',
+                                                                  'name': 'product',
+                                                                  'required': True,
+                                                                  'type': 'string'},
+                                                                 {'description': 'ID '
+                                                                                 'de '
+                                                                                 'la '
+                                                                                 'cuenta '
+                                                                                 'de '
+                                                                                 'AWS '
+                                                                                 'donde '
+                                                                                 'se '
+                                                                                 'ejecutará '
+                                                                                 'la '
+                                                                                 'prueba.',
+                                                                  'name': 'environment',
+                                                                  'required': True,
+                                                                  'type': 'string'},
+                                                                 {'description': 'Región '
+                                                                                 'de '
+                                                                                 'AWS '
+                                                                                 'donde '
+                                                                                 'se '
+                                                                                 'ejecutará '
+                                                                                 'la '
+                                                                                 'prueba.',
+                                                                  'name': 'region',
+                                                                  'required': True,
+                                                                  'type': 'string'},
+                                                                 {'description': 'URL '
+                                                                                 'de '
+                                                                                 'la '
+                                                                                 'aplicación '
+                                                                                 'que '
+                                                                                 'se '
+                                                                                 'va '
+                                                                                 'a '
+                                                                                 'probar.',
+                                                                  'name': 'appurl',
+                                                                  'required': True,
+                                                                  'type': 'string'},
+                                                                 {'description': 'Duración '
+                                                                                 'de '
+                                                                                 'la '
+                                                                                 'prueba.',
+                                                                  'name': 'duration',
+                                                                  'required': True,
+                                                                  'type': 'string'},
+                                                                 {'description': 'Indica '
+                                                                                 'si '
+                                                                                 'se '
+                                                                                 'probará '
+                                                                                 'la '
+                                                                                 'caída '
+                                                                                 'de '
+                                                                                 'una '
+                                                                                 'AZ.',
+                                                                  'name': 'scenario_az',
+                                                                  'required': False,
+                                                                  'type': 'boolean'},
+                                                                 {'description': 'Indica '
+                                                                                 'si '
+                                                                                 'se '
+                                                                                 'ejecutará '
+                                                                                 'la '
+                                                                                 'prueba '
+                                                                                 'de '
+                                                                                 'estrés.',
+                                                                  'name': 'scenario_stress',
+                                                                  'required': False,
+                                                                  'type': 'boolean'},
+                                                                 {'description': 'Indica '
+                                                                                 'si '
+                                                                                 'se '
+                                                                                 'probará '
+                                                                                 'la '
+                                                                                 'caída '
+                                                                                 'de '
+                                                                                 'toda '
+                                                                                 'una '
+                                                                                 'región.',
+                                                                  'name': 'scenario_region',
+                                                                  'required': False,
+                                                                  'type': 'boolean'},
+                                                                 {'description': 'Parámetro '
+                                                                                 'de '
+                                                                                 'depuración '
+                                                                                 'utilizado '
+                                                                                 'en '
+                                                                                 'caso '
+                                                                                 'de '
+                                                                                 'problemas.',
+                                                                  'name': 'verbose',
+                                                                  'required': False,
+                                                                  'type': 'boolean'}],
+                                                'output_params': [{'description': 'Estado '
+                                                                                  'de '
+                                                                                  'la '
+                                                                                  'ejecución '
+                                                                                  'del '
+                                                                                  'automatismo.',
+                                                                   'name': 'status',
+                                                                   'required': True,
+                                                                   'type': 'string'},
+                                                                  {'description': 'Descripción '
+                                                                                  'detallada '
+                                                                                  'del '
+                                                                                  'resultado '
+                                                                                  'de '
+                                                                                  'la '
+                                                                                  'prueba.',
+                                                                   'name': 'message',
+                                                                   'required': True,
+                                                                   'type': 'string'}],
+                                                'output_values_description': 'El '
+                                                                             'resultado '
+                                                                             'puede '
+                                                                             'incluir '
+                                                                             'detalles '
+                                                                             'del '
+                                                                             'estado '
+                                                                             'de '
+                                                                             'las '
+                                                                             'pruebas '
+                                                                             'y '
+                                                                             'cualquier '
+                                                                             'error '
+                                                                             'encontrado '
+                                                                             'durante '
+                                                                             'su '
+                                                                             'ejecución.'},
+                                    'environment': 'prod'}],
+                  'executor_type': 'API REST'},
+     'identifier': 'tec-resiliencia-escenarios',
+     'metricas': ['Tiempo de respuesta', 'Tasa de éxito'],
+     'name': 'Pruebas de Resiliencia en Escenarios',
+     'qa': 'Este automatismo ha pasado pruebas unitarias e integrales.',
+     'repository': {'repository_url': 'https://bitbucket.org/mapfre-cloud-services/tec-resiliencia-escenarios/src/main/'},
+     'securizacion_parametros_salida': 'Todos los parámetros de salida '
+                                       'están filtrados para evitar la '
+                                       'exposición de datos sensibles.',
+     'tags': {'scope': ['Resiliencia'], 'tech': ['Jenkins', 'AWS']},
+     'updated_at': '2024-10-01',
+     'version': '1.0.0'}

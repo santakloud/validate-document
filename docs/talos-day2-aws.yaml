@@ -1,0 +1,64 @@
+schema_version: "v0.1.0"
+automation:
+  identifier: "talos-day2-aws"
+  name: "Talos Day 2 AWS"
+  description: "Habilita acciones de día 2 en las instancias EC2 de la organización de AWS, como bastionado o instalación de agentes."
+  engineering_team: "Equipo Talos"
+  engineering_team_contact:
+    engineering_team_contact_email: "contacto-equipo-talos@mapfre.com"
+    engineering_team_contact_name: "Nombre del Contacto"
+  engineering_team_responsible:
+    engineering_team_responsible_email: "responsable-equipo-talos@mapfre.com"
+    engineering_team_responsible_name: "Nombre del Responsable"
+  repository:
+    repository_url: "https://bitbucket.org/mapfre-cloud-services/poseidon-internal-flow-handler/src/main/"
+  updated_at: "2024-07-16"
+  version: "1.0.0"
+  tags:
+    tech:
+      - "Linux"
+      - "Windows"
+      - "AWS"
+      - "api"
+    scope:
+      - "IaaS"
+  executor:
+    executor_type: "API REST"
+    environments:
+      - environment: "dev"
+        details:
+          api_endpoint: "https://api.dev.endpoint"
+          api_http_method: "POST"
+          api_swagger_url: "https://api.dev.endpoint/swagger"
+          api_valid_response_codes:
+            - 200
+            - 201
+          input_params:
+            - name: "instance_id"
+              description: "ID de la instancia EC2"
+              type: "string"
+              required: true
+          output_params:
+            - name: "operation_status"
+              description: "Estado de la operación"
+              type: "string"
+              required: true
+          output_values_description: "El resultado de la operación (por ejemplo, success, failure)"
+  securizacion_parametros_salida: "Ofrece un identificador único con el cual consultar vía API el estado y el output."
+  alarmado: "No hay alarmado para el propio automatismo, pero este es invocado desde una AWS Step Function que lanza alertas por correo."
+  qa: "No implementado"
+  documentation: "https://marketplace.mapfre.com/docs/default/mapfredocument/CloudSite/tec/docs/talos/FormulariosServidoresCloudDia2/"
+  metricas:
+    - "N/A"
+  compliance_%: 75
+precons:
+  - precon_name: "Verificar estado de instancia"
+    precon_description: "Falla si la instancia está apagada"
+    condition:
+      function_lambda_name: "verificar_estado_instancia"
+      function_lambda_account: "123456789012"
+      args:
+        - key: "instance_id"
+          value: "ID de la instancia EC2"
+      result_expected: 0
+      error_message: "La instancia EC2 está apagada o no disponible"

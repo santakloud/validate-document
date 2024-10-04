@@ -1,0 +1,106 @@
+schema_version: "v0.1.0"
+automation:
+  identifier: "tec-resiliencia-escenarios"
+  name: "Pruebas de Resiliencia en Escenarios"
+  description: "Automatismo que ejecuta pruebas de resiliencia en diferentes escenarios, como la caída de una AZ, estrés y caída de toda una región."
+  engineering_team: "TEC"
+  engineering_team_contact:
+    engineering_team_contact_email: "contacto@tec.mapfre.com"
+    engineering_team_contact_name: "Equipo de Resiliencia"
+  engineering_team_responsible:
+    engineering_team_responsible_email: "responsable@tec.mapfre.com"
+    engineering_team_responsible_name: "Responsable de Resiliencia"
+  repository:
+    repository_url: "https://bitbucket.org/mapfre-cloud-services/tec-resiliencia-escenarios/src/main/"
+  updated_at: "2024-10-01"
+  version: "1.0.0"
+  tags:
+    tech:
+      - "Jenkins"
+      - "AWS"
+    scope:
+      - "Resiliencia"
+  executor:
+    executor_type: "API REST"
+    environments:
+      - environment: "prod"
+        details:
+          api_endpoint: "https://cloud.pro.devops.mapfre.com/jenkins/job/TEC/is-tec/tec-resiliencia-escenarios"
+          api_http_method: "POST"
+          api_valid_response_codes:
+            - 200
+            - 500
+          input_params:
+            - name: "id_execution"
+              description: "Identificador de la ejecución para rastreo y seguimiento."
+              type: "string"
+              required: true
+            - name: "email"
+              description: "Correo electrónico del peticionario y contacto de resultados."
+              type: "string"
+              required: true
+            - name: "product"
+              description: "ID del producto en Zeus."
+              type: "string"
+              required: true
+            - name: "environment"
+              description: "ID de la cuenta de AWS donde se ejecutará la prueba."
+              type: "string"
+              required: true
+            - name: "region"
+              description: "Región de AWS donde se ejecutará la prueba."
+              type: "string"
+              required: true
+            - name: "appurl"
+              description: "URL de la aplicación que se va a probar."
+              type: "string"
+              required: true
+            - name: "duration"
+              description: "Duración de la prueba."
+              type: "string"
+              required: true
+            - name: "scenario_az"
+              description: "Indica si se probará la caída de una AZ."
+              type: "boolean"
+              required: false
+            - name: "scenario_stress"
+              description: "Indica si se ejecutará la prueba de estrés."
+              type: "boolean"
+              required: false
+            - name: "scenario_region"
+              description: "Indica si se probará la caída de toda una región."
+              type: "boolean"
+              required: false
+            - name: "verbose"
+              description: "Parámetro de depuración utilizado en caso de problemas."
+              type: "boolean"
+              required: false
+          output_params:
+            - name: "status"
+              description: "Estado de la ejecución del automatismo."
+              type: "string"
+              required: true
+            - name: "message"
+              description: "Descripción detallada del resultado de la prueba."
+              type: "string"
+              required: true
+          output_values_description: "El resultado puede incluir detalles del estado de las pruebas y cualquier error encontrado durante su ejecución."
+  securizacion_parametros_salida: "Todos los parámetros de salida están filtrados para evitar la exposición de datos sensibles."
+  alarmado: "El sistema de alarmas enviará notificaciones a los responsables en caso de fallo en la ejecución."
+  qa: "Este automatismo ha pasado pruebas unitarias e integrales."
+  documentation: "https://cloud.mapfre.com/docs/tec/resiliencia-escenarios"
+  metricas:
+    - "Tiempo de respuesta"
+    - "Tasa de éxito"
+  compliance_%: 100
+precons:
+  - precon_name: "Validación de la existencia de la cuenta AWS"
+    precon_description: "Comprueba que la cuenta de AWS proporcionada es válida y está operativa."
+    condition:
+      function_lambda_name: "validate-aws-account"
+      function_lambda_account: "123456789012"
+      args:
+        - key: "environment"
+          value: "ID de la cuenta AWS"
+      result_expected: 0
+      error_message: "La cuenta de AWS no es válida o no está operativa."
